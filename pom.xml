@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.gitlab.blockstack</groupId>
+	<artifactId>ArtMap-parent</artifactId>
+	<version>3.9.7</version>
+	<description>Make pixel art!</description>
+	<packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+	<modules>
+		<module>api</module>
+		<!-- spigot/paper compatibility -->
+		<module>compatibility/Spigot_1_13</module>
+		<module>compatibility/Spigot_1_14</module>
+		<module>compatibility/Spigot_1_16</module>
+		<module>compatibility/Spigot_1_18</module>
+		<!-- plugin compatibility -->
+		<module>compatibility/ASkyBlock</module>
+		<module>compatibility/BentoBox</module>
+		<module>compatibility/CMI</module>
+		<module>compatibility/Essentials</module>
+		<module>compatibility/Factions</module>
+		<module>compatibility/GriefPrevention</module>
+		<module>compatibility/GriefDefender</module>
+		<module>compatibility/MarriageMaster</module>
+		<module>compatibility/PlotSquared4</module>
+		<module>compatibility/PlotSquared5</module>
+		<module>compatibility/RedProtect</module>
+		<module>compatibility/Residence</module>
+		<module>compatibility/SabreFactions</module>
+		<module>compatibility/Towny</module>
+		<module>compatibility/USkyBlock</module>
+		<module>compatibility/WorldGuard</module>
+		<module>DataTables</module>
+		<module>plugin</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>sk89q-repo</id>
+			<url>https://maven.enginehub.org/repo/</url>
+		</repository>
+		<repository>
+			<id>dmulloy2-repo</id>
+			<url>https://repo.dmulloy2.net/nexus/repository/public/</url>
+		</repository>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+		<!-- iDisguise -->
+		<repository>
+			<id>robingrether-repo</id>
+			<url>https://www.robingrether.de/mc/repo</url>
+		</repository>
+		<repository>
+			<id>citizen</id>
+			<url>https://repo.citizensnpcs.co</url>
+		</repository>
+		<repository>
+			<id>codemc-repo</id>
+			<url>https://repo.codemc.org/repository/maven-public/</url>
+		</repository>
+		<repository>
+			<id>enginehub</id>
+			<url>https://maven.enginehub.org/repo/</url>
+		</repository>
+		<repository>
+			<id>mojang</id>
+			<name>Mojang's Repository</name>
+			<url>https://libraries.minecraft.net/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.gitlab.blockstack</groupId>
+				<artifactId>ArtMap-api</artifactId>
+				<version>3.9.7</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<scm>
+		<url>https://gitlab.com/BlockStack/ArtMap</url>
+		<developerConnection>wispoffates</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>gitlab</system>
+		<url>https://gitlab.com/BlockStack/ArtMap/issues</url>
+	</issueManagement>
+</project>
